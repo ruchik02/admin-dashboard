@@ -28,3 +28,9 @@ body,
 ::-webkit-scrollbar-track:hover{
   background: #555;
 }
+.pro-menu-item:active{
+  color: "#6870fa";
+}
+.pro-inner-item:hover{
+  color: "#868dfb";
+}
