@@ -87,11 +87,11 @@ const Contacts = () => {
         },
       }}
     >
+      {/* Header */}
       <Headers
         title="CONTACTS"
         subtitle="List of Contacts for Future Reference"
       />
-      {/* Header */}
       <Box m="40px 0 0 0"></Box>
       <DataGrid
         checkboxSelection
