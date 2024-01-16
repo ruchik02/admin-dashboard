@@ -48,7 +48,6 @@ const Team = () => {
             display="flex"
             justifyContent="center"
             padding="5px"
-
             backgroundColor={
               access === "admin"
                 ? colors.greenAccent[600]
@@ -70,45 +69,46 @@ const Team = () => {
     },
   ];
   return (
-    <Box
-      m="20px"
-      sx={{
-        "& .MuiDataGrid-root": {
-          border: "none",
-        },
-        "& .MuiDataGrid-cell": {
-          borderBottom: "none",
-        },
-        "& .name-column--cell": {
-          color: colors.greenAccent[300],
-        },
-        "& .MuiDataGrid-columnHeaders": {
-          backgroundColor: colors.blueAccent[700],
-          borderBottom: "none",
-        },
-        "& .MuiDataGrid-iconButtonContainer": {
-          padding: "3px",
-        },
-        "& .MuiDataGrid-virtualScroller": {
-          backgroundColor: colors.primary[400],
-        },
-        "& .MuiDataGrid-footerContainer": {
-          borderTop: "none",
-          backgroundColor: colors.blueAccent[700],
-        },
-        "& .MuiCheckbox-root": {
-          color: `${colors.greenAccent[200]} !important`,
-        },
-        "& .MuiDataGrid-menuIcon": {
-          marginRight: "-5px",
-        },
-      }}
-    >
-        <Headers title="TEAM" subtitle="Managing the Team Members" />
+    <Box m="20px">
       {/* Header */}
-      <Box m="40px 0 0 0">
+      <Headers title="TEAM" subtitle="Managing the Team Members" />
+      <Box
+        m="20px 0 0 0"
+        height="75vh"
+        sx={{
+          "& .MuiDataGrid-root": {
+            border: "none",
+          },
+          "& .MuiDataGrid-cell": {
+            borderBottom: "none",
+          },
+          "& .name-column--cell": {
+            color: colors.greenAccent[300],
+          },
+          "& .MuiDataGrid-columnHeaders": {
+            backgroundColor: colors.blueAccent[700],
+            borderBottom: "none",
+          },
+          "& .MuiDataGrid-iconButtonContainer": {
+            padding: "3px",
+          },
+          "& .MuiDataGrid-virtualScroller": {
+            backgroundColor: colors.primary[400],
+          },
+          "& .MuiDataGrid-footerContainer": {
+            borderTop: "none",
+            backgroundColor: colors.blueAccent[700],
+          },
+          "& .MuiCheckbox-root": {
+            color: `${colors.greenAccent[200]} !important`,
+          },
+          "& .MuiDataGrid-menuIcon": {
+            marginRight: "-5px",
+          },
+        }}
+      >
+        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
       </Box>
-      <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
     </Box>
   );
 };
