@@ -70,6 +70,9 @@ const Invoice = () => {
             backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
+          "& .MuiDataGrid-iconButtonContainer": {
+            padding: "3px",
+          },
           "& .MuiDataGrid-virtualScroller": {
             backgroundColor: colors.primary[400],
           },
@@ -79,6 +82,12 @@ const Invoice = () => {
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
+          },
+          "& .MuiDataGrid-menuIcon": {
+            marginRight: "-5px",
+          },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
           },
         }}
       >
